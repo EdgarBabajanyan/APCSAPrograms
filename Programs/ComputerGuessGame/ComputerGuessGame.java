@@ -15,11 +15,11 @@ public class ComputerGuessGame
     
     public static void main(String[] args) 
     {
-/*@4*/  boolean ehandle = true;
-/*@5*/  Random generator = (args.length == 0) ? (new Random()) : (new Random(Integer.parseInt(args[0])));
-/*@5*/  Scanner in = new Scanner(System.in);
+        boolean ehandle = true;
+        Random generator = (args.length == 0) ? (new Random()) : (new Random(Integer.parseInt(args[0])));
+        Scanner in = new Scanner(System.in);
         
-/*@4*/  while(ehandle)
+        while(ehandle)
         {         
             int secret = generator.nextInt(500);
             int guesscount = 0;
@@ -29,13 +29,13 @@ public class ComputerGuessGame
             
             try
             {       
-/*@3*/          String n;
-/*@3*/          int _n;
+                String n;
+                int _n;
                 
-/*@2*/          do  
+                do  
                 {           
-/*@1*/              n = in.nextLine(); 
-/*@3*/              _n = Integer.parseInt(n);
+                    n = in.nextLine(); 
+                   _n = Integer.parseInt(n);
                     guesscount++;
                     fullguesscount++;
                     
@@ -63,7 +63,7 @@ public class ComputerGuessGame
                             continue;
                         }
                     }
-/*@2*/          } while(_n != secret);
+                } while(_n != secret);
                         
                 System.out.println("Congratulations! It only took you " + fullguesscount + " guesses!");
                 break;
